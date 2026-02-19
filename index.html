@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jsPDF CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HOME -->
+    <div id="home-page">
+        <h1>Attendance System</h1>
+
+        <div class="cards">
+            <div class="card" onclick="showPage('train')">
+                🚆 Train Attendance
+            </div>
+
+            <div class="card" onclick="showPage('travel')">
+                🚌 Travel Attendance
+            </div>
+        </div>
+    </div>
+
+    <!-- TRAIN PAGE -->
+    <div id="train-page" class="page">
+        <button onclick="showPage('home')">← Back</button>
+        <h2>Train Attendance</h2>
+
+        <select id="train-select" onchange="loadTrain()">
+            <option value="">Select Station</option>
+            <option value="Vijayawada">Vijayawada</option>
+            <option value="Tenali">Tenali</option>
+             <option value="Nidubrolu">Nidubrolu</option>
+              <option value="Singarayakonda">SingarayaKonda</option>
+               <option value="Nellore">Nellore</option>
+                <option value="Ongole">Ongole</option>
+        </select>
+
+        <div id="train-container"></div>
+    </div>
+
+    <!-- TRAVEL PAGE -->
+    <div id="travel-page" class="page">
+        <button onclick="showPage('home')">← Back</button>
+        <h2>Travel Attendance</h2>
+
+        <select id="travel-select" onchange="loadTravel()">
+            <option value="">Select Section</option>
+            <option value="A">Section A</option>
+            <option value="B">Section B</option>
+            <option value="C">Section C</option>
+            <option value="D">Section D</option>
+        </select>
+
+        <div id="travel-container"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
