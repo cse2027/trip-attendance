@@ -245,7 +245,7 @@ const travelData = {
         "CHAITANYA NELLURI",
         "POTHINA. PAVAN KALYAN",
         "DHANUMJAY SURAGANI",
-        "MSN SAHATI"
+        "MSN SAHITI"
     ],
     D: [
         "PUTTA SUJITHA",
@@ -439,3 +439,4 @@ function downloadPDF(type, label) {
 window.onload = function () {
     showPage("home");
 };
+
